@@ -29,7 +29,7 @@ This project aims to create a manifesto comparator for each leading candidates i
 This project focuses on analyzing pre-election poll data and predicting final election results using an LSTM (Long Short-Term Memory) neural network model. The project also simulates the redistribution of second-preference votes based on pre-defined assumptions and calculates the final vote counts for the election.
 
 ### 1. Web Scraping Poll Results
-We extract the latest poll data from a specified URL using `BeautifulSoup` to scrape the necessary information, including support percentages for the candidates. This information is then used to train a model and make predictions.
+We extracted the latest poll data from a specified URL using `BeautifulSoup` to scrape the necessary information, including support percentages for the candidates. This information is then used to train a model and make predictions.
 
 ### 2. Data Analysis and Preprocessing
 A sample dataset of election polls from 2024 is created and preprocessed for analysis. The data is one-hot encoded, and relevant features like candidate support and demographics (age group, education level) are considered. The model also uses historical data from the 2019 election for comparison.
