@@ -46,23 +46,23 @@ After determining the final percentages, the total vote count is adjusted based 
 ## Sentiment Analysis
 To assess public sentiment towards candidates by analyzing text data from social media and news sources. This helps to understand the emotional tone of public discourse, which can be crucial for interpreting polling data.
 
-## Techniques Used
+### Techniques Used
 
-### Data Collection
+#### Data Collection
 
 - **Tool:** Twitter API
 - **Process:** 
   - Collected recent tweets mentioning the candidates of interest.
   - Used the `tweepy` library to fetch tweets based on specific search queries related to each candidate.
 
-### Text Preprocessing
+#### Text Preprocessing
 
 - **Objective:** To clean and standardize the text data for analysis.
 - **Process:** 
   - Replaced mentions and URLs with placeholders to focus on the content of the tweets.
   - Ensured that the sentiment analysis is not influenced by specific users or external links mentioned in the tweets.
 
-### Sentiment Analysis Model
+#### Sentiment Analysis Model
 
 - **Tool:** RoBERTa model
 - **Process:**
@@ -70,7 +70,7 @@ To assess public sentiment towards candidates by analyzing text data from social
   - **Model Inference:** Passed tokenized text through the RoBERTa model to obtain sentiment scores. The model was pre-trained on Twitter data to effectively classify sentiments in social media contexts.
   - **Softmax Function:** Applied the softmax function to the model's output to convert raw scores into probabilities, representing the likelihood of each sentiment class (positive, neutral, negative).
 
-### Sentiment Classification
+#### Sentiment Classification
 
 - **Objective:** To categorize each tweet into one of three sentiment classes: positive, neutral, or negative.
 - **Process:** 
