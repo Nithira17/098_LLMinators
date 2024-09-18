@@ -43,18 +43,33 @@ In cases where no candidate crosses the 50% mark, we simulate the redistribution
 ### 5. Final Vote Calculation
 After determining the final percentages, the total vote count is adjusted based on the estimated population size (17.1 million). This provides a clearer understanding of the number of votes each candidate is expected to receive.
 
-## Features
+## ChatBot 
 
-- **Web Scraping:** Automatically retrieves election poll data from a website.
-- **LSTM Model:** Utilizes Long Short-Term Memory for time-series prediction based on poll data.
-- **Second-Preference Voting System:** Simulates second-round voting if no candidate achieves a majority in the first round.
-- **Final Vote Estimation:** Converts percentage predictions into actual vote counts based on a given population size.
+This feature is a chatbot that allows users to query the manifestos and policies of prominent Sri Lankan candidates, view pre-election poll results, and get general information on the election. Built with Langchain and RAG (Retrieval-Augmented Generation) architecture, the model uses PDF documents of candidates' manifestos, web search tools, and poll predictions to provide insightful answers.
+
+### 1. Reading Multiple PDFs
+We utilized the `pypdf` library in Python to extract text from PDF documents. The chatbot reads manifestos from multiple candidates including Ranil Wickremesinghe, Anura Kumara Dissanayake, and Sajith Premadasa, as well as pre-election poll data and general election questions.
+
+### 2.Embedding the Text and Storing in a Vectorstore
+The extracted text from each PDF is converted into embeddings using the HuggingFace `hkunlp/instructor-xl` model. These embeddings are then stored in a `Chroma` vectorstore. By persisting the vectorstore, we efficiently reuse the data for answering future queries.
+
+### 3. Agent Architecture
+We implemented tools for each candidate's manifesto using a RAG (Retrieval-Augmented Generation) setup. Each tool is responsible for retrieving and answering questions about a specific candidate’s manifesto. Additionally, a DuckDuckGo search tool is integrated to fetch real-time web data, and a poll prediction tool is included for querying pre-election polls and their forecasts.
+
+### 4. LLM Integration
+The chatbot uses the `gemini-1.5-flash` model from Google Generative AI for generating responses. This LLM is deployed within the RAG architecture to provide accurate and context-aware answers based on both document retrieval and external web search.
+
+### 5. Interactive Querying
+Users can ask the chatbot detailed questions about individual manifestos, compare policies between candidates, or inquire about pre-election predictions and general election information. The system uses a mix of retrieval from vectorstores and real-time web search to deliver comprehensive responses.
 
 ## Requirements
 
 - Python 3.x
-- `BeautifulSoup` for web scraping
-- `pandas` and `numpy` for data handling
-- `sklearn` for preprocessing
-- `tensorflow` and `keras` for building the LSTM model
+- `langchain` for building the RAG-based model and managing agent architectures
+- `langchain-community` for using additional tools from the Langchain community
+- `langchain-chroma` for managing and storing document embeddings in Chroma's vectorstore
+- `pypdf` for reading and extracting text from PDFs
+- `InstructorEmbedding` for generating text embeddings using HuggingFace models
+- `sentence-transformers==2.2.2` for text preprocessing and vectorization
+- `langchain_google_genai` for connecting to Google’s generative AI models like `gemini-1.5-flash`
 
