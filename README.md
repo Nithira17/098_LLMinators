@@ -48,18 +48,12 @@ To assess public sentiment towards candidates by analyzing text data from social
 
 ### Techniques Used
 
-#### Data Collection
+#### Data Collection & text preprocessing
 
 - **Tool:** Twitter API
 - **Process:** 
   - Collected recent tweets mentioning the candidates of interest.
   - Used the `tweepy` library to fetch tweets based on specific search queries related to each candidate.
-
-#### Text Preprocessing
-
-- **Objective:** To clean and standardize the text data for analysis.
-- **Process:** 
-  - Replaced mentions and URLs with placeholders to focus on the content of the tweets.
   - Ensured that the sentiment analysis is not influenced by specific users or external links mentioned in the tweets.
 
 #### Sentiment Analysis Model
