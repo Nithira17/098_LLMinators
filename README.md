@@ -6,7 +6,7 @@ This project aims to create a manifesto comparator with a chatbot using a Retrie
 
 ## Features
 
-- **Chatbot with FAISS vector store**: Provides fast and relevant document retrieval from stored vectors using Hugging Face embeddings.
+- **Chatbot using LangChain**: Provides fast and relevant document retrieval related to the Sri Lanka's President Election 2024 from vectorstores using Hugging Face embedding model and Gemini-1.5-flash LLM.
 - **Flutter Web App**: Allows users to query manifestos and view retrieved information in an interactive UI.
 - **Flask API**: Handles queries from the frontend, retrieves relevant documents from the FAISS vector store, and returns results.
 
