@@ -58,6 +58,3 @@ After determining the final percentages, the total vote count is adjusted based 
 - `sklearn` for preprocessing
 - `tensorflow` and `keras` for building the LSTM model
 
-## Results
-
-After training the LSTM model and running the second-preference redistribution, the predicted results are displayed as percentages for each candidate. These results can then be normalized and adjusted based on a predefined population size to give estimated vote counts.
