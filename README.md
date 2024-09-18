@@ -1,8 +1,8 @@
-#Right Vote
+# Right Vote
 
 # Manifesto Comparator with RAG Chatbot and Vector Store
 
-This project aims to create a manifesto comparator with a chatbot using a Retrieval-Augmented Generation (RAG) model and a FAISS vector store. The system allows users to query political manifestos and retrieve relevant information. The backend is built using Flask and FAISS, and the frontend is built using Flutter.
+This project aims to create a manifesto comparator with a chatbot using a Retrieval-Augmented Generation (RAG) model and a vector store. The system allows users to query political manifestos and retrieve relevant information. The backend is built using Flask and FAISS, and the frontend is built using Flutter.
 
 ## Features
 
