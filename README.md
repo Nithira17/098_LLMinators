@@ -1,8 +1,8 @@
 # Right Vote
 
-# Manifesto Comparator with RAG Chatbot and Vector Store
+# Manifesto Comparator with RAG Chatbot and Win Predictor for the 2024 Presidential Election in Sri Lanka
 
-This project aims to create a manifesto comparator with a chatbot using a Retrieval-Augmented Generation (RAG) model and a vector store. The system allows users to query political manifestos and retrieve relevant information. The backend is built using Flask and FAISS, and the frontend is built using Flutter.
+This project aims to create a manifesto comparator for each leading candidates in presidential election with a chatbot using a Retrieval-Augmented Generation (RAG) model and Win Predictor model using Official Poll data and social media sentiments. The system allows users to query political manifestos and retrieve relevant information of each candidate and ask the general information on the election as well. The backend is built using Flask, Firebase and the frontend is built using Flutter.
 
 ## Features
 
@@ -11,8 +11,8 @@ This project aims to create a manifesto comparator with a chatbot using a Retrie
 - **Flask API**: Handles queries from the frontend, retrieves relevant documents from the FAISS vector store, and returns results.
 
 ## Tech Stack
-
-- **Backend**: Python, Flask, Hugging Face
+- **ChatBot**: Python, LangChain, Chroma, Hugging Face, Gemini-1.5-flash
+- **Backend**: Python, Flask, FireBase
 - **Frontend**: Flutter
 - **Hosting**: Google Colab (for testing) and cloud platforms (for deployment)
 
