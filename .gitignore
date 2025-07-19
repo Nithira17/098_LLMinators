@@ -48,3 +48,5 @@ chroma_db/
 
 # Logs
 *.log
+
+data/manifesto-ranil.pdf
